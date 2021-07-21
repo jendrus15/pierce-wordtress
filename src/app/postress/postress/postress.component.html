@@ -1,0 +1,7 @@
+<button (click)="getComments()">Get comments</button>
+
+<div class="conent--posts">
+    <div *ngFor="let post of posts">
+        <app-postress-post [post]="post"></app-postress-post>
+    </div>
+</div>

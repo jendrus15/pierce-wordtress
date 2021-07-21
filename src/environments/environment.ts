@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  wordpressApi: 'https://public-api.wordpress.com/rest/v1.1/sites/en.blog.wordpress.com'
 };
 
 /*

@@ -1,0 +1,10 @@
+<div class="content--post" *ngIf="post">
+    <div>Published: {{ post.date | date:'shortDate' }}</div>
+    <h1>{{ post.title }}</h1>
+    <div [innerHtml]="post.content"></div> 
+
+    <div class="content--post--comments" *ngFor="let comment of post.comments">
+        <h2>Comment section</h2>
+        <app-postress-comment [comment]="comment"></app-postress-comment>
+    </div>
+</div>
