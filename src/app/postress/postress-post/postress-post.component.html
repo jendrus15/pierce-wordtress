@@ -1,5 +1,5 @@
 <div class="content--post" *ngIf="post">
-    <div>Published: {{ post.date | date:'shortDate' }}</div>
+    <div class="content--post--published">Published: {{ post.date | date:'shortDate' }}</div>
     <h1>{{ post.title }}</h1>
     <div [innerHtml]="post.content"></div> 
 

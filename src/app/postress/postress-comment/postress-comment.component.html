@@ -1,3 +1,4 @@
 <div class="content--post--comment" *ngIf="comment">
     <div [innerHtml]="comment.content"></div>
+    <div>Added: {{comment.date | date:'shortDate'}}</div>
 </div>

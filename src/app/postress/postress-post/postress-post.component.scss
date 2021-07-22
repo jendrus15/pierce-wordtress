@@ -1,11 +1,14 @@
 .content--post {
-    margin: 10px 0;
+    margin: 20px 0;
     padding: 10px;
-    border-top: 1px solid black;
 }
 
 .content--post--comments {
     margin: 10px 0;
     padding: 10px;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
+}
+
+.content--post--published {
+    text-decoration: underline;
 }

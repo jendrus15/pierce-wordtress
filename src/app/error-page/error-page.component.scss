@@ -1,0 +1,17 @@
+.error-page {
+    border: 1px solid #ff0000;
+    background: #e8bdbd;
+
+    padding: 20px;
+
+    .error-page-message-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+
+        .error-page-message-title-icon {
+            display: inline-block;
+            transform: rotate(90deg);
+            margin-left: 10px;
+        }
+    }
+}
