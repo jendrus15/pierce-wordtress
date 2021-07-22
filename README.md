@@ -1,33 +1,15 @@
-# pierce-wordtress
-Task for applying at Pierce AB
-
 # PierceWordtress
+### Task for applying at Pierce AB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+## Summary of design thought
 
-## Development server
+It all started with trying to figure out what **elements** will the component have, and how many repeatable content will appear.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This led to a conclusion we will have:
+1. main view,
+2. post element,
+3. comment element.
 
-## Code scaffolding
+Then I asked my self how this could be used in the future. I decided to create a **module** out of the code, as the feautre could be used by other apps.
 
-# pierce-wordtress
-Task for applying at Pierce AB
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+After initial planning it was time for creation of said **module** and **components**, **service** and **routing**. After creating rough initial working solution I went on with **refactoring** until getting the final solution.
