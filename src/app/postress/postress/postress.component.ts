@@ -26,19 +26,22 @@ export class PostressComponent implements OnInit {
     );
   }
 
-  private fetchComments(): void {
-    this.posts.forEach(post => {
-      this._postressService.getComment(post.id, this.commentCount).subscribe(
-        (data: IWordpressCommentResponse) => {
-          post.comments = data.comments.map(comment => new PostressCommentEntity(comment));
-          console.log(post);
-        }
-      );
-    });
+  private async _fetchComments(): Promise<void> {
+
+    // to have sequancial api calls, we are using for
+    for (const post of this.posts) {
+      const comments: PostressCommentEntity[] = await this._fetchSinglePostComments(post.id);
+      post.comments = comments;
+    }
   }
 
   public getComments(): void {
-    this.fetchComments();
+    this._fetchComments();
   }
 
+  private async _fetchSinglePostComments(id: number): Promise<PostressCommentEntity[]> {
+    const response: IWordpressCommentResponse = await this._postressService.getComments(id, this.commentCount).toPromise();
+
+    return response.comments.map(comment => new PostressCommentEntity(comment));
+  }
 }
